@@ -22,7 +22,9 @@ class ViewController: UIViewController {
             
         }
         
-        startTime = NSDate.timeIntervalSinceReferenceDate()
+        if displayTimeLabel.text == "00:00:00" {
+            startTime = NSDate.timeIntervalSinceReferenceDate()
+        }
         
     }
     
