@@ -20,8 +20,9 @@ class ViewController: UIViewController {
         if !timer.valid {
             timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: #selector(ViewController.updateTime), userInfo: nil, repeats: true)
             
-            startTime = NSDate.timeIntervalSinceReferenceDate()
         }
+        
+        startTime = NSDate.timeIntervalSinceReferenceDate()
         
     }
     
