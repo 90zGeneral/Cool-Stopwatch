@@ -25,7 +25,6 @@ class ViewController: UIViewController {
         if displayTimeLabel.text == "00:00:00" {
             startTime = NSDate.timeIntervalSinceReferenceDate()
         }
-        
     }
     
     @IBAction func stop(sender: AnyObject) {
