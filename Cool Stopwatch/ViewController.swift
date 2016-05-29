@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     @IBAction func start(sender: AnyObject) {
         
         if !timer.valid {
+            
             timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: #selector(ViewController.updateTime), userInfo: nil, repeats: true)
             
         }
