@@ -38,7 +38,7 @@ class ViewController: UIViewController {
         let currentTime = NSDate.timeIntervalSinceReferenceDate()
         var elapsedTime: NSTimeInterval = currentTime - startTime
         
-        let minutes = UInt8(elapsedTime / 60.0)
+        let minutes = UInt8(elapsedTime / 60)
         elapsedTime -= (NSTimeInterval(minutes) * 60)
         
         let seconds = UInt8(elapsedTime)
