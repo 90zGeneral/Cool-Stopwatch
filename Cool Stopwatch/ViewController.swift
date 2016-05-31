@@ -23,7 +23,7 @@ class ViewController: UIViewController {
             
         }
         
-        if displayTimeLabel.text == "00:00:00" {
+        if displayTimeLabel.text == "00:00:00:00" {
             startTime = NSDate.timeIntervalSinceReferenceDate()
         }
     }
@@ -38,6 +38,9 @@ class ViewController: UIViewController {
         let currentTime = NSDate.timeIntervalSinceReferenceDate()
         var elapsedTime: NSTimeInterval = currentTime - startTime
         
+        let hours = UInt8(elapsedTime / 3600)
+        elapsedTime -= (NSTimeInterval(hours) * 3600)
+        
         let minutes = UInt8(elapsedTime / 60)
         elapsedTime -= (NSTimeInterval(minutes) * 60)
         
@@ -46,11 +49,12 @@ class ViewController: UIViewController {
         
         let fraction = UInt8(elapsedTime * 100)
         
+        let strHours = String(format: "%02d", hours)
         let strMinutes = String(format: "%02d", minutes)
         let strSeconds = String(format: "%02d", seconds)
         let strFraction = String(format: "%02d", fraction)
             
-        displayTimeLabel.text = "\(strMinutes):\(strSeconds):\(strFraction)"
+        displayTimeLabel.text = "\(strHours):\(strMinutes):\(strSeconds):\(strFraction)"
         
     }
 
