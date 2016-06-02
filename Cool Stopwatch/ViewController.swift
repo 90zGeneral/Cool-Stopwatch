@@ -22,12 +22,23 @@ class ViewController: UIViewController {
             timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: #selector(ViewController.updateTime), userInfo: nil, repeats: true)
             
         }
+        
+        if displayTimeLabel.text == "00:00:00:00" {
+            
+            startTime = NSDate.timeIntervalSinceReferenceDate()
+        
+        }else {
+            
+            startTime = Double(displayTimeLabel.text!)!
+            
+        }
 
     }
     
     @IBAction func stop(sender: AnyObject) {
         
         timer.invalidate()
+        
     }
     
     func updateTime() {
