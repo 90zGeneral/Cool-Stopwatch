@@ -27,25 +27,30 @@ class ViewController: UIViewController {
             
             startTime = NSDate.timeIntervalSinceReferenceDate()
         
-        }else {
-            
-            startTime = Double(displayTimeLabel.text!)!
-            
         }
 
     }
+    
+    var holder : String = ""
     
     @IBAction func stop(sender: AnyObject) {
         
         timer.invalidate()
         
+        holder = strFraction
+        
     }
+    
+    var strHours : String = "";
+    var strMinutes : String = "";
+    var strSeconds : String = "";
+    var strFraction : String = "";
     
     func updateTime() {
         
         let currentTime = NSDate.timeIntervalSinceReferenceDate()
         var elapsedTime: NSTimeInterval = currentTime - startTime
-        
+
         let hours = UInt8(elapsedTime / 3600)
         elapsedTime -= (NSTimeInterval(hours) * 3600)
         
@@ -57,10 +62,10 @@ class ViewController: UIViewController {
         
         let fraction = UInt8(elapsedTime * 100)
         
-        let strHours = String(format: "%02d", hours)
-        let strMinutes = String(format: "%02d", minutes)
-        let strSeconds = String(format: "%02d", seconds)
-        let strFraction = String(format: "%02d", fraction)
+        strHours = String(format: "%02d", hours)
+        strMinutes = String(format: "%02d", minutes)
+        strSeconds = String(format: "%02d", seconds)
+        strFraction = String(format: "%02d", fraction)
             
         displayTimeLabel.text = "\(strHours):\(strMinutes):\(strSeconds):\(strFraction)"
         
