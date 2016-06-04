@@ -42,25 +42,39 @@
                                     <action selector="stop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2AP-Sv-nRX"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3N-C6-K6X">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2:0:0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3N-C6-K6X">
                                 <rect key="frame" x="205" y="76" width="190" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="190" id="Ww6-kI-pyE"/>
                                     <constraint firstAttribute="height" constant="70" id="eaZ-SL-f6z"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XzE-LK-X1k">
+                                <rect key="frame" x="265" y="207" width="70" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="5T3-dc-Yax"/>
+                                    <constraint firstAttribute="height" constant="40" id="aZJ-RH-NJI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D4N-Wc-Qit"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="L3N-C6-K6X" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="56" id="6oF-z4-dVv"/>
                             <constraint firstItem="L3N-C6-K6X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7nG-W0-2Sh"/>
                             <constraint firstItem="HT2-Tx-tX3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="187" id="Hcd-b9-H7I"/>
+                            <constraint firstItem="XzE-LK-X1k" firstAttribute="top" secondItem="L3N-C6-K6X" secondAttribute="bottom" constant="61" id="QEG-73-G5x"/>
                             <constraint firstItem="HT2-Tx-tX3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="6" id="Uaz-Vr-yMD"/>
                             <constraint firstItem="VXj-9f-ZPG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="187" id="dNg-Nh-Tqg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="VXj-9f-ZPG" secondAttribute="trailing" constant="7" id="lWJ-fl-Ywb"/>
+                            <constraint firstItem="XzE-LK-X1k" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yaQ-BE-FPa"/>
                         </constraints>
                     </view>
                     <connections>
